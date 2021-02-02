@@ -1,0 +1,789 @@
+.top-section {
+  background: url("/wp-content/themes/wedding-world/assets/img/why-us-bg.jpg") no-repeat center / cover;
+  width: 100%;
+  padding: 20px 0;
+
+  &__wrapper {
+    padding: 20px 0;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    width: 100%;
+    margin-bottom: 35px;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__icon {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+  }
+
+  &__description {
+    color: $themeColorOne;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+//xs 544
+@media #{$mobile} {
+    .top-section {
+    &__item {
+      width: 50%;
+        justify-content: end;
+    }
+
+    &__description {
+      font-size: 14px;
+    }
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .top-section {
+    &__item {
+      width: 50%;
+    }
+
+    &__description {
+      height: 65px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .top-section {
+    padding: 4% 0;
+
+    &__item {
+      width: 33.3333%;
+    }
+
+    &__wrapper {
+      padding-top: 35px;
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+  }
+}
+
+.block-video {
+  padding: 20px 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 1024px) {
+  .block-video {
+    padding: 4% 0;
+  }
+}
+
+.main-catalog {
+  width: 100%;
+  padding: 20px 0;
+
+  &__description {
+    font-size: 18px;
+    text-align: center;
+
+    & a {
+      color: $themeColorTwo;
+      font-size: inherit;
+
+      &:hover, &:focus {
+        color: lighten($themeColorTwo, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 180px;
+    padding: 25px 15px;
+    margin-bottom: 10px;
+      @include smooth_animation;
+      
+      &:hover {
+          transform: scale(1.02);
+      }
+  }
+
+  &__item-title {
+    color: $themeColorOne;
+    font-size: 22px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .main-catalog {
+    &__item {
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .main-catalog {
+    &__item {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main-catalog {
+    &__item {
+      height: 400px;
+    }
+
+    &__item-title {
+      font-size: 26px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .main-catalog {
+    padding: 4% 0;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: 'Каталог';
+      color: $light_bg_color;
+      font-family: $fontFamilyOne;
+      font-size: 26vw;
+      line-height: 1;
+      font-weight: 700;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 45px;
+      z-index: -1;
+    }
+
+    &__description {
+      font-size: 20px;
+    }
+
+    &__item {
+      height: 480px;
+    }
+
+    &__item-title {
+      margin-bottom: 25px;
+      font-size: 28px;
+    }
+
+    &__wrapper {
+      padding-top: 70px;
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .main-catalog {
+    &__item {
+      height: 650px;
+    }
+  }
+}
+
+@media screen and (min-width: 1680px) {
+  .main-catalog {
+    &:before {
+      top: 15px;
+    }
+  }
+}
+
+.block-popular {
+  width: 100%;
+  padding: 20px 0;
+
+  &__description {
+    font-size: 18px;
+    text-align: center;
+
+    & a {
+      color: $themeColorTwo;
+      font-size: inherit;
+
+      &:hover, &:focus {
+        color: lighten($themeColorTwo, 10%);
+        text-decoration: none;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding-top: 30px;
+    width: 100%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 180px;
+    padding: 25px 15px;
+    margin-bottom: 10px;
+  }
+
+  &__item-title {
+    display: block;
+    color: $themeColorOne;
+    font-size: 22px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 15px;
+
+    &:hover, &:focus {
+      color: $themeColorTwo;
+      text-decoration: none;
+    }
+  }
+
+  &__price-section {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+  }
+
+  &__price {
+    font-size: 22px;
+    font-weight: 700;
+    display: inline-block;
+  }
+
+  &__price-old {
+    color: $old_price_color;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: line-through;
+    display: inline-block;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 375px) {
+  .block-popular {
+    &__item {
+      height: 200px;
+    }
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .block-popular {
+    &__item {
+      height: 300px;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .block-popular {
+    &__item {
+      height: 400px;
+    }
+
+    &__item-title {
+      font-size: 26px;
+    }
+
+    &__price {
+      font-size: 28px;
+    }
+
+    &__price-old {
+      font-size: 22px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .block-popular {
+    padding: 4% 0;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: 'Популярні';
+      color: $light_bg_color;
+      font-family: $fontFamilyOne;
+      font-size: 23vw;
+      line-height: 1;
+      font-weight: 700;
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 3%;
+      z-index: -1;
+    }
+
+    &__description {
+      font-size: 24px;
+    }
+
+    &__item {
+      height: 480px;
+    }
+
+    &__item-title {
+      margin-bottom: 25px;
+      font-size: 30px;
+    }
+
+    &__price {
+      font-size: 32px;
+    }
+
+    &__price-old {
+      font-size: 24px;
+    }
+
+    &__wrapper {
+      padding-top: 70px;
+    }
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .block-popular {
+    &__item {
+      height: 670px;
+    }
+  }
+}
+
+.order-section {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 40px;
+  background: url("/wp-content/themes/wedding-world/assets/img/form-bg.jpg") no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &__description {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__logo {
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    transform: translateX(-50%);
+    top: -70px;
+    left: 50%;
+    z-index: 33;
+  }
+
+  &__wrapper {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .order-section {
+    padding: 4% 0;
+    height: 600px;
+
+    &__description {
+      font-size: 20px;
+      margin-top: 30px;
+    }
+
+    &__caption {
+      width: 100%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .order-section {
+    height: auto;
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+    &__logo {
+      width: 100px;
+      height: 100px;
+      top: -50px;
+    }
+  }
+}
+
+#order-form {
+  & .fc-form {
+    background: transparent !important;
+    color: $themeColorOne !important;
+    box-shadow: none;
+  }
+
+  & .form-page-content {
+    padding: 20px 15px;
+  }
+
+  & .form-element-html {
+    padding: 10px 15px;
+
+    & input {
+      background: $primary_color_two;
+      color: $themeColorOne;
+      height: 60px;
+      border: 1px solid $border_form_color;
+      padding: 10px 15px 10px 40px;
+      @extend %smooth_animation;
+
+      &::placeholder {
+        color: #cecfd4;
+        font-size: 17px;
+      }
+
+      &:focus {
+        @extend %smooth_animation;
+        border-color: lighten($themeColorTwo, 10%);
+        box-shadow: 0 20px 32px 0 rgba(49, 52, 66, 0.05);
+      }
+    }
+
+    & .formcraft-icon {
+      color: #dbab8d;
+      transform: translateY(-50%);
+      top: 50%;
+      right: auto;
+      left: 10px;
+      width: 30px;
+      height: 30px;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    & .error {
+      color: $themeColorTwo;
+      right: 10px;
+      top: 5px;
+    }
+
+    & .submit-button {
+      background: $themeColorTwo;
+      box-shadow: 0 20px 32px 0 rgba(227, 39, 78, 0.25);
+      color: $primary_color_two;
+      height: 60px;
+      font-family: $fontFamilyTwo;
+      font-size: 14px;
+      text-transform: uppercase;
+      line-height: 1.6;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      @extend %smooth_animation;
+
+      &:hover, &:focus {
+        @extend %smooth_animation;
+        color: $primary_color_two;
+        text-shadow: 1px 2px rgba(49, 52, 66, 0.3);
+        background-color: lighten($themeColorTwo, 12%);
+        border-color: lighten($themeColorTwo, 12%);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  #order-form {
+    & .form-page-content {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  #order-form {
+    width: 100%;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+
+    & .form-element {
+      width: 100% !important;
+
+      & input {
+        height: auto;
+      }
+
+      & .submit-button {
+        height: 44px;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+.review-section {
+  width: 100%;
+  padding: 20px 0;
+
+  &__description {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 0 30px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .review-section {
+    padding: 4% 0;
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 30px;
+
+      & .review-slider {
+        width: 65%;
+      }
+    }
+
+    &__container {
+      background: url("/wp-content/themes/wedding-world/assets/img/leave-feedback-bg.jpg") no-repeat center/cover;
+      justify-content: flex-end;
+      width: 30%;
+      height: 420px;
+      padding: 60px 30px;
+      border-radius: 4px;
+      position: relative;
+
+      &:before {
+        content: '';
+        background: url("/wp-content/themes/wedding-world/assets/img/small_logo.svg") no-repeat center;
+        width: 90px;
+        height: 30px;
+        position: absolute;
+        left: 60px;
+        top: 40px;
+        z-index: 1;
+      }
+    }
+
+    &__description {
+      font-family: $fontFamilyOne;
+      color: $themeColorOne;
+      text-align: left;
+      font-size: 22px;
+      max-width: 241px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.bottom-section {
+  padding: 35px 0;
+  margin-bottom: 30px;
+  background: url("/wp-content/themes/wedding-world/assets/img/about-company-bg.jpg") no-repeat center / cover;
+
+  &__title {
+    color: #cecfd4;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+  }
+
+  &__main-title {
+    &.h2 {
+      color: $themeColorTwo;
+      margin: 10px 0 20px;
+      font-family: $fontFamilyOne;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+
+  &__description {
+    color: #50556b;
+    font-size: 17px;
+    text-align: center;
+    line-height: 1.65;
+  }
+
+  &__wrapper {
+    background: $primary_color_two;
+    margin-top: 25px;
+    box-shadow: 0 20px 87px 0 rgba(49, 52, 66, 0.1);
+    width: 100%;
+    padding: 15px;
+    border-radius: 4px;
+  }
+
+  &__container {
+    border: 1px solid #f5eeea;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 15px 0;
+  }
+
+  &__item {
+    width: 100%;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__item-title {
+    color: $themeColorTwo;
+    font-family: $fontFamilyOne;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: normal;
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    color: #50556b;
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+//xs 544
+@media #{$mobile} {
+    .bottom-section {
+    &__item {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media screen and (min-width: 575px) {
+  .bottom-section {
+    &__container {
+      flex-direction: row;
+      flex-wrap: wrap;
+      padding: 20px 15px;
+    }
+
+    &__item {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+
+    &__text {
+      height: 55px;
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .bottom-section {
+    &__description {
+      width: 100%;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__item-title {
+      font-size: 50px;
+    }
+
+    &__item {
+      width: 25%;
+      margin-bottom: 0;
+    }
+
+    &__container {
+      padding: 40px 35px;
+    }
+
+    &__wrapper {
+      background: $primary_color_two;
+      margin-top: 40px;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bottom-section {
+    padding: 5% 0;
+
+    &__title {
+      font-size: 17px;
+    }
+
+    &__container {
+      position: relative;
+
+      &:before {
+        content: '';
+        background: rgba(255, 255, 255, 0.1);
+        box-shadow: 0 20px 87px 0 rgba(49, 52, 66, 0.1);
+        width: 80%;
+        height: 20px;
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        top: calc(100% + 15px);
+        z-index: 1;
+      }
+    }
+  }
+}
