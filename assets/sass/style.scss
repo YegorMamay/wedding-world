@@ -1,4 +1,4 @@
-@charset "UTF-8";
+@charset "utf-8";
 /*
 Theme Name: brainworks
 Theme URI:
@@ -8,7 +8,7 @@ Author URI: https://brainworks.com.ua
 Description:
 License:
 License URI:
-Version: 14.05.20
+Version: 13.05.20
 Tags: one-column, two-columns, full-width-template, e-commerce
 */
 
@@ -67,6 +67,12 @@ Tags: one-column, two-columns, full-width-template, e-commerce
 @import "blocks/sidebar";
 @import "blocks/footer";
 @import "blocks/list-category";
+
+::-moz-selection {
+  text-shadow: none;
+  color: $selectionFontColor;
+  background-color: $selectionBgColor;
+}
 
 ::selection {
   text-shadow: none;

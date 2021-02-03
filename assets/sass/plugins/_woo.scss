@@ -168,6 +168,12 @@
 
       form {
         &.cart {
+			.added_to_cart  {
+				margin-top: 0;
+			}
+			.single_add_to_cart_button  {
+				margin: 0 10px;
+			}
           .button {
             & + .button {
               margin-left: 5px;
@@ -181,7 +187,7 @@
   // Product quantity
   .quantity {
     .qty {
-      padding: $formFieldPadding;
+      padding: 14.5px 8px;
     }
   }
 
@@ -199,6 +205,8 @@
       }
     }
   }
+
+
 
   .col2-set {
     padding-top: 20px;
@@ -391,6 +399,67 @@
     margin-bottom: 20px;
 }
 
+.woocommerce form .form-row label.checkbox,
+.woocommerce-page form .form-row label.checkbox,
+.woocommerce-checkout label.checkbox {
+	display: -ms-flex;
+	display: flex;
+	align-items: center;
+}
+
+.woocommerce #respond input#submit.loading::after,
+.woocommerce a.button.loading::after,
+.woocommerce button.button.loading::after,
+.woocommerce input.button.loading::after {
+	top: 28%;
+}
+
+@media screen and (max-width: 1280px) {
+	.woocommerce  {
+		div.product {
+			form.cart {
+				.added_to_cart {
+					margin-top: 15px;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.woocommerce {
+		// Product quantity
+	    .quantity {
+	      .qty {
+	        padding: 15.5px 8px;
+	      }
+	    }
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.woocommerce {
+		// Product quantity
+	    .quantity {
+	      .qty {
+	        padding: 12.5px 8px;
+	      }
+	    }
+	}
+}
+@media screen and (max-width: 544px) {
+	.woocommerce {
+		// Product quantity
+	    .quantity {
+	      .qty {
+	        padding: 9px 8px;
+	      }
+	    }
+	}
+}
+
+
+
 @media screen and (min-width: 768px) {
   #top {
     & .product {
@@ -471,6 +540,33 @@
       }
     }
   }
+  .woocommerce  {
+	  div.product {
+		  form.cart {
+			  .added_to_cart {
+				  margin-top: 0px;
+			  }
+		  }
+	  }
+  }
+}
+
+@media screen and (max-width: 599px) {
+	.woocommerce {
+		div.product {
+			form {
+				display: -ms-flex;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				&.cart {
+					.single_add_to_cart_button {
+						margin: 10px 0px 10px;
+					}
+				}
+			}
+		}
+	}
 }
 
 // My Accaunt page
