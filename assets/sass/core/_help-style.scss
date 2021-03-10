@@ -21,7 +21,7 @@ em {
     &-muted {
         color: $textMutedColor !important;
     }
-    
+
     &-white {
         color: #fff;
     }
@@ -49,7 +49,7 @@ em {
     &-underline {
         text-decoration: underline;
     }
-    
+
     &-through {
         text-decoration: line-through;
     }
@@ -61,11 +61,11 @@ em {
     &-bold {
         font-weight: bold;
     }
-    
+
     &-italic {
         font-weight: italic;
     }
-    
+
     &-vertical {
         transform: rotate(-90deg);
     }
@@ -122,7 +122,7 @@ em {
 
 .shadow {
     box-shadow: $shadow;
-    
+
     &-bottom {
         box-shadow: 0 8px 6px -6px $themeColorOne;
     }
@@ -147,7 +147,17 @@ em {
         border-radius: 50%;
         border: 2px solid #ccc;
         border-top-color: #363636;
-        animation: spin 1s linear infinite;
+        -webkit-animation: spin 1s linear infinite;
+                animation: spin 1s linear infinite;
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
     }
 }
 
@@ -169,7 +179,7 @@ em {
     .hide-on-desktop {
         display: block !important;
     }
-    
+
     .center-on-mobile {
         text-align: center !important;
     }
@@ -197,7 +207,7 @@ em {
     }
 
     .hide-on-desktop {
-        display: none !important;
+        display: block !important;
     }
 
     .center-on-mobile {

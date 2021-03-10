@@ -8,8 +8,14 @@
     <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?> - <?php bloginfo('description'); ?>">
 
    <meta name="google-site-verification" content="im4idYeUe6x49NR3pC7WBJVxYrLUe7nyWDihbi668uc" />
-   
+
     <meta name="description" content="<?php bloginfo('description'); ?>">
+
+    <meta name = «geo.placename» content = «Киев, Украина» />
+    <meta name = «geo.position» content = «50.43361243, 30.51279965» />
+    <meta name = «geo.region» content = «UA-город Киев» />
+    <meta name = «ICBM» content = «50.43361243, 30.51279965» />
+
 
     <link rel="shortcut icon" href="<?php echo esc_url(get_template_directory_uri() . '/assets/img/favicon.ico'); ?>"
           type="image/x-icon">
@@ -23,6 +29,26 @@
 <div class="wrapper js-container"><!--Do not delete!-->
 
     <header class="header">
+		<div class="header__container">
+            <div class="container">
+                <div class="header__top-section d-flex align-items-center justify-content-between">
+					<div class="header__field">
+						<?php echo do_shortcode('[bw-social]'); ?>
+					</div>
+					<div class="header__field d-flex">
+						<?php get_search_form(); ?>
+						<!--<a class="header__link" href="/my-account/">
+                            <i class="fal fa-user"></i>
+                        </a>-->
+						<div class="woo-cart">
+						       <?php if ( class_exists( 'WooCommerce' ) ) woocommerce_cart() ?>
+						</div>
+
+					</div>
+
+                </div>
+            </div>
+        </div>
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__column">
@@ -67,7 +93,6 @@
                             )); ?>
                         </nav>
                     <?php } ?>
-                    <?php echo do_shortcode('[bw-social]'); ?>
                 </div>
             </div>
         </div>
@@ -86,6 +111,10 @@
             ])
             ?>
         </div>
+		<!--<div class="header__field d-flex">
+			<?php get_search_form(); ?>
+		</div>-->
+
         <button class="hamburger js-hamburger" type="button" tabindex="0">
             <span class="hamburger-box">
                 <span class="hamburger-inner"></span>

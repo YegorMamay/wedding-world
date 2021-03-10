@@ -3,11 +3,81 @@
     margin-bottom: 0;
     border-bottom: none;
   }
+
 }
 
-.header {
-  display: none;
+header.header {
+
+
+  &__column {
+	  .right-nav {
+		  width: 100%;
+	  }
+  }
+  &__wrapper {
+	  padding: 25px 0;
+  }
+  &__middle-column {
+	  position: absolute;
+	  width: 265px;
+	  left: 50%;
+	  transform: translateX(-50%);
+	  top: 0px;
+  }
 }
+.header {
+	display: none;
+	&__container {
+  	  border-bottom: 1px solid $social_bg_color;
+    }
+}
+
+.header__field {
+	padding: 20px 0;
+	& .form-inline{
+		border-bottom: 1px solid $themeColorOne;
+		justify-content: space-between;
+		margin-right: 2rem;
+		input {
+	  	  border: none;
+		  font-family: $fontFamilyTwo;
+		  font-size: 16px;
+	    }
+		button {
+			background: transparent;
+			color: $themeColorOne;
+			box-shadow: none;
+			border: none;
+			padding: 10px;
+			&.btn-secondary:not(:disabled):not(.disabled):active {
+				border-color: none;
+				background-color: none;
+			}
+		}
+
+	}
+	.header__link {
+		margin-right: 2rem;;
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		i {
+			font-size: 1.25em;
+		}
+	}
+	.woo-cart {
+		display: -ms-flex;
+		display: flex;
+		align-items: center;
+		margin-right: 1.5rem;
+	}
+	.cart-contents::before {
+		content: '\f290';
+		font-size: 25px;
+	}
+}
+
+
 
 @media screen and (min-width: 1024px) {
   .header {
@@ -44,7 +114,7 @@
       }
 
       & .right-nav {
-        width: calc(100% - 100px);
+        width: 100%;
 
         & .menu-container {
           display: flex;
@@ -84,4 +154,39 @@
       }
     }
   }
+}
+
+@media screen and (max-width: 1366px) {
+	.header {
+		&__middle-column {
+			width: 190px;
+		}
+		.nav .menu-link {
+			font-size: 14px;
+			padding: 8px 4px;
+		}
+	  }
+
+}
+
+@media screen and (max-width: 1023px) {
+
+}
+
+@media screen and (max-width: 576px) {
+	.nav-mobile-header {
+		.header__field {
+			.form-inline {
+				max-width: 120px;
+				margin-right: 0;
+				input {
+					padding: 11px 2px 11px 6px;
+					width: calc(100% - 20px );
+				}
+				button {
+					padding: 11px 5px 11px 2px;
+				}
+			}
+		}
+	}
 }
