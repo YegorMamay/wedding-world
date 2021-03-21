@@ -202,13 +202,16 @@ if (!function_exists('bw_html_sitemap')) {
         $ignoreposttypes = array(
             'attachment',
             'popup',
+            'reviews',
+            'sn_catalogs',
+            'product'
         );
 
         $post_types = get_post_types($args, 'objects');
 
         foreach ($post_types as $post_type) {
             if (!in_array($post_type->name, $ignoreposttypes)) {
-                $output .= '<h2 class="sitemap-headline">' . $post_type->labels->name . '</h2>';
+                $output .= '<h4 class="sitemap-headline">' . $post_type->labels->name . '</h4>';
                 $args = array(
                     'posts_per_page' => -1,
                     'post_type' => $post_type->name,
