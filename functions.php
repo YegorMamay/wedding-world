@@ -189,3 +189,6 @@ function showhide_footer() {
     <?php endif; ?>
     <?php
 }
+
+remove_action( 'woocommerce_archive_description', 'woocommerce_taxonomy_archive_description', 10 );
+add_action( 'woocommerce_after_shop_loop', 'woocommerce_taxonomy_archive_description', 100 );
